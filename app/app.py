@@ -23,10 +23,10 @@ def event_handler():
         job = q.enqueue(analyse_data, data)
         q_length= len(q)
         return (
-            f'Result:{job.result}'
-            f'enqueued at {job.enqueued_at}'
-            f'input value {data}'
-            f'queue length {q_length}'
+            f'Job ID:({job.id})'
+            f'Enqueued at ({job.enqueued_at})'
+            f'Input value ({data})'
+            f'Queue length ({q_length})'
                 )
 
     return "Nothing inputed in endpoint header"

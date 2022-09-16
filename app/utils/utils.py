@@ -10,6 +10,7 @@ def analyse_data(data):
     Can even send the data as an email after the process is done 
     '''
     print("Task is running")
+    print(f"Input value was {data}")
     time.sleep(2) #need to give worker enough time to give result
     print("Task Completed")
     return data
