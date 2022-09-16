@@ -1,5 +1,5 @@
 # Hello Bink
-This is a single page flask app, that takes the paramenters given to endpoint **/event**. Using format **http://127.0.0.1:5000/data?input=parameter**. It Passes the data into the analyse_data(data) function which returns the original input. Conceptually analyse_data(data) can analyse certain data, return a validation response to the customer then when the task is completed by the redis worker, return the summary of the analysis as an email.
+This is a single page flask app, that takes the paramenters given to endpoint **/event**. Using format **http://127.0.0.1:5000/event?data=parameter**. It Passes the data into the analyse_data(data) function which returns the original input. Conceptually analyse_data(data) can analyse certain data, return a validation response to the customer then when the task is completed by the redis worker, return the summary of the analysis as an email.
 
 # Notes:
 - On push unit testing is done using git actions
@@ -9,7 +9,7 @@ This is a single page flask app, that takes the paramenters given to endpoint **
 - Run $rq worker to view updates to the queue.
 - Run python3 app.py in parent directory.
 - Open http://127.0.0.1:5000/events
-- Pass in argument like this: http://127.0.0.1:5000/data?input=parameter. Where any value can replace "parameter".
+- Pass in argument like this: http://127.0.0.1:5000/event?data=parameter. Where any value can replace "parameter".
 
 # Testing:
 - Basic unit test for functions in utils.
