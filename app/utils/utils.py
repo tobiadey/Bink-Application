@@ -11,6 +11,6 @@ def analyse_data(data):
     '''
     print("Task is running")
     print(f"Input value was {data}")
-    time.sleep(2) #need to give worker enough time to give result
+    time.sleep(4) #need to give worker enough time to give result
     print("Task Completed")
     return data
