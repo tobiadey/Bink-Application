@@ -8,7 +8,7 @@ RQ-
 from flask import Flask, request
 from rq import Queue
 from redis import Redis
-from utils import hello
+from utils.utils import analyse_data
 import time
 
 
@@ -22,10 +22,17 @@ q = Queue(connection=redis_conn)
 @app.route("/event")
 def event_handler():
 
-    if request.args.get("input"):
-        input_value = request.args.get("input")
-        job = q.enqueue(hello, input_value)
-        return f"Job {job.id} has been enqued. Value added as input was {input_value}"
+    if request.args.get("data"):
+        data = request.args.get("data")
+        job = q.enqueue(analyse_data, data)
+        nl = '\n'
+        q_length= len(q)
+        return (
+            f'Result:{job.result}'
+            f'enqueued at {job.enqueued_at}'
+            f'input value {data}'
+            f'queue length {q_length}'
+                )
 
     return "Nothing inputed in endpoint header"
 
