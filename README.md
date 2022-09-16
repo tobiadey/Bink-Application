@@ -1,6 +1,8 @@
 # Hello Bink
 This application is a single page flask app, that takes the paramenters given to endpoint /event. Passing the data into the  analyse_data(data) function. Conceptually analyse_data(data) can analyse certain data, return a validation response to the customer then when the procces is completed by the redis worked return the summary of the analysis as an email.
 
+# Notes:
+- On push the unit testing is done using git actions
 
 # Steps to implement:
 - Run redis server using $redis-server.

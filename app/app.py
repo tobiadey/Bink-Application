@@ -21,7 +21,6 @@ def event_handler():
     if request.args.get("data"):
         data = request.args.get("data")
         job = q.enqueue(analyse_data, data)
-        nl = '\n'
         q_length= len(q)
         return (
             f'Result:{job.result}'
