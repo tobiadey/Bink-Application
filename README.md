@@ -1,6 +1,4 @@
 # Hello Bink
-
-# Explanation of application
 This application is a single page flask app, that takes the paramenters given to endpoint /event. Passing the data into the  analyse_data(data) function. Conceptually analyse_data(data) can analyse certain data, return a validation response to the customer then when the procces is completed by the redis worked return the summary of the analysis as an email.
 
 
