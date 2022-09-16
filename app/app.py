@@ -1,9 +1,5 @@
 '''
 Bink Application - Building a small project using Flask & RQ
-
-Flask - 
-Redis-
-RQ- 
 '''
 from flask import Flask, request
 from rq import Queue

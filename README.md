@@ -1,7 +1,7 @@
 # Hello Bink
 
 # Explanation of application
-This application is a single page flask app, that takes the paramenters given to endpoint /event. Passing the data into the  analyse_data(data) function. Conceptually analyse_data(data) can analyse certain data and return the summary of the analysis as an email.
+This application is a single page flask app, that takes the paramenters given to endpoint /event. Passing the data into the  analyse_data(data) function. Conceptually analyse_data(data) can analyse certain data, return a validation response to the customer then when the procces is completed by the redis worked return the summary of the analysis as an email.
 
 
 # Steps to implement:
@@ -17,13 +17,9 @@ This application is a single page flask app, that takes the paramenters given to
 
 # Benefit of using RQ
 - Fast lookup time as it uses Redis/ Remote Dictionary server (K/V store database)- uses a system where data is read from main computer memeory.
-- Reduces load on servers as you can delay tasks based on priority. Low, Medium, High.
+- Reduces load on servers as Redis worker executes the tasks outside of the application's HTTP server and they can be delayed based on priority. Low, Medium, High.
 - Simple to implement
-
-
-
-
-# Example use cases
+- Prevents timeouts from long HTTP requests.
 
 
 
