@@ -8,7 +8,7 @@ RQ-
 from flask import Flask, request
 from rq import Queue
 from redis import Redis
-from utils.utils import analyse_data
+from app.utils.utils import analyse_data
 import time
 
 
