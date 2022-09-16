@@ -16,7 +16,7 @@ This is a single page flask app, that takes the paramenters given to endpoint **
 - run $python3 -m pytest in parent directory to start test.
 
 # Benefit of using RQ
-- Fast lookup time as it uses Redis/ Remote Dictionary server (K/V store database)- uses a system where data is read from main computer memeory.
+- Fast lookup time as it uses Redis/ Remote Dictionary server (K/V store database)- uses a system where data is read from main computer memory.
 - Reduces load on servers as Redis worker executes the tasks outside of the application's HTTP server and they can be delayed based on priority. Low, Medium, High.
 - Simple to implement
 - Prevents timeouts from long HTTP requests.
